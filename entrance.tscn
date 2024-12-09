@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfehmbgx8q8bd"]
+
+[ext_resource type="Texture2D" uid="uid://bd36r1e5yh08v" path="res://Pic/Background.png" id="1_qiwec"]
+[ext_resource type="Texture2D" uid="uid://ljucl4kg36m4" path="res://Pic/start.png" id="2_1ncry"]
+[ext_resource type="Script" path="res://button.gd" id="3_tqroe"]
+
+[sub_resource type="GDScript" id="GDScript_01h32"]
+
+[sub_resource type="GDScript" id="GDScript_psl4n"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Start" type="Node2D" parent="."]
+script = SubResource("GDScript_01h32")
+
+[node name="Background" type="Sprite2D" parent="Start"]
+position = Vector2(720, 450)
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("1_qiwec")
+
+[node name="Button" type="Button" parent="Start"]
+offset_left = 560.0
+offset_top = 516.0
+offset_right = 912.0
+offset_bottom = 642.0
+icon = ExtResource("2_1ncry")
+script = ExtResource("3_tqroe")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+script = SubResource("GDScript_psl4n")
