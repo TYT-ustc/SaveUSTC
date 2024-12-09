@@ -49,7 +49,7 @@ func drawmap(data: Dictionary):
 		# 复制精灵节点
 		var copied_sprite = original_sprite.duplicate() as Sprite2D
 		# 设置复制节点的位置
-		copied_sprite.position = Vector2(200+200*x, 300+200*y)  # 替换为目标坐标
+		copied_sprite.position = Vector2(200+180*x, 300+180*y)  # 替换为目标坐标
 		# 添加到场景树中
 		add_child(copied_sprite)
 
