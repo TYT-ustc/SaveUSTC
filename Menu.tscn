@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ja8k4rkyp3ot"]
 
 [ext_resource type="Texture2D" uid="uid://cqxs5sfoa1bj6" path="res://Pic/MenuBkg.png" id="1_jrsko"]
-[ext_resource type="Script" path="res://Menubutton1.gd" id="1_ncsqy"]
-[ext_resource type="Script" path="res://Menubutton2.gd" id="3_jsbk6"]
+[ext_resource type="Script" path="res://Menubutton.gd" id="2_14t4r"]
+[ext_resource type="Script" path="res://exitmenu.gd" id="3_r406u"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -21,7 +21,7 @@ offset_right = 97.0
 offset_bottom = 85.0
 scale = Vector2(6.59233, 6.59233)
 text = "新游戏1"
-script = ExtResource("1_ncsqy")
+script = ExtResource("2_14t4r")
 
 [node name="Button2" type="Button" parent="Menu"]
 z_index = 1
@@ -31,7 +31,7 @@ offset_right = 587.0
 offset_bottom = 78.0
 scale = Vector2(6.59233, 6.59233)
 text = "新游戏2"
-script = ExtResource("3_jsbk6")
+script = ExtResource("2_14t4r")
 
 [node name="Button3" type="Button" parent="Menu"]
 z_index = 1
@@ -41,7 +41,7 @@ offset_right = 1075.0
 offset_bottom = 89.0
 scale = Vector2(6.59233, 6.59233)
 text = "新游戏3"
-script = ExtResource("1_ncsqy")
+script = ExtResource("2_14t4r")
 
 [node name="Button4" type="Button" parent="Menu"]
 z_index = 1
@@ -51,7 +51,7 @@ offset_right = 103.0
 offset_bottom = 329.0
 scale = Vector2(6.59233, 6.59233)
 text = "新游戏4"
-script = ExtResource("1_ncsqy")
+script = ExtResource("2_14t4r")
 
 [node name="Button5" type="Button" parent="Menu"]
 z_index = 1
@@ -61,4 +61,12 @@ offset_right = 583.0
 offset_bottom = 331.0
 scale = Vector2(6.59233, 6.59233)
 text = "新游戏5"
-script = ExtResource("1_ncsqy")
+script = ExtResource("2_14t4r")
+
+[node name="Button" type="Button" parent="Menu"]
+offset_left = 1214.0
+offset_top = 679.0
+offset_right = 1414.0
+offset_bottom = 791.0
+text = "Exit"
+script = ExtResource("3_r406u")

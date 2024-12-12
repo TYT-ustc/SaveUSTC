@@ -18,7 +18,8 @@ func _ready():
 	if not name.begins_with("Enemy_"):
 		print("Not a clone, script will not execute.")
 		return
-	data = Globals.data
+	var root = get_tree().root.get_child(0)
+	data = root.data
 	connect("start_1", Callable(self, "_on_start_1"))
 	print("Enemy ready: ", self.name)
 

@@ -1,7 +1,5 @@
 extends Node2D
 
-var file_path = "res://Game/game1.json"
-
 var original_sprite : Sprite2D
 var original_enemy_1 : Sprite2D
 var data : Dictionary
@@ -23,10 +21,16 @@ func read_json(filepath: String) -> Dictionary:
 		return {}
 
 func _ready():
+	var game_num = Globals.current_scene_number
+	print("Current game number: ", game_num)
+	# 根据game_num确定读取的文件路径
+	var file_path = "res://Game/game%d.json" % game_num
+	print("Loading data from: ", file_path)
 	original_sprite = $OriginalRoad  # 确认节点名是否准确
 	original_enemy_1 = $enemy_1  # 确认节点名是否准确，并附加了 enemy_1.gd 脚本
 	data = read_json(file_path)
 	print("Data loaded: ", data)
+	Globals.data = data
 	drawmap()
 	for i in range(data["enemy"]["num"]):
 		drawenemy(i)
