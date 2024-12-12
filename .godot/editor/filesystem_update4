@@ -1,4 +1,7 @@
-res://entrance.tscn
-res://Menu.tscn
 res://Game/Game1.tscn
 res://Game/game_1.gd
+res://entrance.tscn
+res://Menu.tscn
+res://Menubutton.gd
+res://Game/enemy_1.gd
+res://Menubutton2.gd
