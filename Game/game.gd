@@ -55,15 +55,20 @@ func drawmap():
 		copied_sprite.position = Vector2(200 + 180 * x, 300 + 180 * y)
 		if i == num - 1:
 			copied_sprite.texture = load("res://Pic/USTC.png")
-			copied_sprite.scale = Vector2(0.38, 0.38)
+			copied_sprite.scale = Vector2(0.35, 0.35)
 			copied_sprite.name = "destination"
 		else:
+			copied_sprite.name = "road_%d" % i
 			var direction = copied_sprite.position - Vector2(200 + 180 * val[i+1][0], 300 + 180 * val[i+1][1])
 			var angle = direction.angle()
 			copied_sprite.rotation = angle
 			copied_sprite.rotation -= PI / 2
 		copied_sprite.visible = true
 		add_child(copied_sprite)
+		#加入组
+		copied_sprite.add_to_group("roads")
+		print("Added road: ", copied_sprite.name, " at position: ", copied_sprite.position)
+	get_tree().call_group("roads", "begin")
 
 func drawenemy(id: int):
 	var enemy_type = data["enemy"]["value"][id]["type"]

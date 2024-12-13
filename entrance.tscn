@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfehmbgx8q8bd"]
+[gd_scene load_steps=7 format=3 uid="uid://bfehmbgx8q8bd"]
 
-[ext_resource type="Texture2D" uid="uid://bd36r1e5yh08v" path="res://Pic/Background.png" id="1_qiwec"]
-[ext_resource type="Texture2D" uid="uid://ljucl4kg36m4" path="res://Pic/start.png" id="2_1ncry"]
+[ext_resource type="Texture2D" uid="uid://bgm2b32y5yjdh" path="res://Pic/BackGround.png" id="1_qiwec"]
+[ext_resource type="Theme" uid="uid://be6u67ywwprkg" path="res://Themes/Theme.tres" id="2_6vdpc"]
+[ext_resource type="FontFile" uid="uid://dir7wn3vfk883" path="res://Fonts/ark-pixel-12px-proportional-zh_cn.otf" id="2_q7go1"]
 [ext_resource type="Script" path="res://button.gd" id="3_tqroe"]
+[ext_resource type="FontFile" uid="uid://frv7iy537npn" path="res://Fonts/MiSans-Normal.otf" id="4_y3xxn"]
 
 [sub_resource type="GDScript" id="GDScript_01h32"]
 
@@ -12,38 +14,47 @@
 script = SubResource("GDScript_01h32")
 
 [node name="Background" type="Sprite2D" parent="Start"]
-position = Vector2(720, 450)
-scale = Vector2(0.765, 0.765)
+position = Vector2(720, 405)
+scale = Vector2(0.762, 0.762)
 texture = ExtResource("1_qiwec")
 
 [node name="Button" type="Button" parent="Start"]
-offset_left = 542.0
-offset_top = 336.0
-offset_right = 894.0
-offset_bottom = 462.0
-icon = ExtResource("2_1ncry")
+offset_left = 566.0
+offset_top = 350.0
+offset_right = 874.0
+offset_bottom = 509.0
+theme = ExtResource("2_6vdpc")
+theme_override_font_sizes/font_size = 100
+text = "启动！"
+flat = true
 script = ExtResource("3_tqroe")
 
 [node name="Label" type="Label" parent="Start"]
-offset_left = 72.0
-offset_top = 481.0
-offset_right = 1362.0
-offset_bottom = 652.0
+offset_left = 82.0
+offset_top = 526.0
+offset_right = 1372.0
+offset_bottom = 763.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q7go1")
 theme_override_font_sizes/font_size = 30
-text = "你看这个字体是不是很大气很好看爱不释眼！
-好看就多看看点了启动之后就再也看不到这么好看的字体了doge
+text = "更改了字体为免费商用开源字体“方舟像素”
 另外内容很简陋看了你就知道了但是这真的是我做了十几hours做出来的呜呜呜我还是太菜了
 （为了让项目看起来很充实我要多写点字上去别骂了别骂了其实你们的项目进展也不大对吧对吧）
-项目重命名为“像素塔防！！！”"
+项目重命名为“虚空防线VoidDefense”！！！"
 
 [node name="Label2" type="Label" parent="Start"]
-offset_left = 1074.0
+offset_left = 1009.0
 offset_top = 684.0
-offset_right = 1421.0
-offset_bottom = 785.0
+offset_right = 1426.0
+offset_bottom = 801.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_y3xxn")
+theme_override_font_sizes/font_size = 20
 text = "Made with Godot Engine 4.3
 Latest Version Made At 2024/12/13 01:30
-Members: Ziqin Xu, Yutian Gao, Haoran Zhou
+Members: Ziqin Xu, Yutian Tang, Haoran Zhou
 (为什么要写英文呢因为英文看起来比较装逼)"
+
+[node name="Label3" type="Label" parent="Start"]
+offset_right = 40.0
+offset_bottom = 23.0

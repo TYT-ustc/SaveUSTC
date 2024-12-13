@@ -1,0 +1,9 @@
+res://entrance.tscn
+res://globals.gd
+res://Menu.tscn
+res://Game/Game.tscn
+res://Themes/Theme.tres
+res://Game/label.gd
+res://Game/original_road.gd
+res://Game/game.gd
+res://Game/enemy_1.gd

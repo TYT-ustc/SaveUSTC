@@ -1,25 +1,30 @@
-[gd_scene load_steps=9 format=3 uid="uid://drb0vxqob01hv"]
+[gd_scene load_steps=11 format=3 uid="uid://drb0vxqob01hv"]
 
 [ext_resource type="Script" path="res://Game/game.gd" id="1_ickso"]
+[ext_resource type="Texture2D" uid="uid://bh70xl8rokwoi" path="res://Pic/MenuBKG.png" id="2_0aijh"]
 [ext_resource type="Script" path="res://Game/original_road.gd" id="2_xux5s"]
 [ext_resource type="Texture2D" uid="uid://dum5mlb8a36u0" path="res://Pic/enemy1-PKU.png" id="3_iadfo"]
 [ext_resource type="Script" path="res://Game/enemy_1.gd" id="4_3ferb"]
 [ext_resource type="Texture2D" uid="uid://bgjp6848f7b1r" path="res://Pic/enemy2-THU.png" id="5_epj4i"]
 [ext_resource type="Script" path="res://Game/label.gd" id="6_cl5ml"]
 [ext_resource type="Script" path="res://Game/backtomenu.gd" id="7_h3yl6"]
+[ext_resource type="Theme" uid="uid://be6u67ywwprkg" path="res://Themes/Theme.tres" id="7_xsrla"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_btat0"]
-load_path = "res://.godot/imported/16pic_9368989_s.png-3150e249352097ffde850a2c4829e7ca.ctex"
 
 [node name="Node2D" type="Node2D"]
 
 [node name="MainGameScene" type="Node2D" parent="."]
 script = ExtResource("1_ickso")
 
+[node name="MenuBkg" type="Sprite2D" parent="MainGameScene"]
+position = Vector2(720, 405)
+scale = Vector2(0.762, 0.762)
+texture = ExtResource("2_0aijh")
+
 [node name="OriginalRoad" type="Sprite2D" parent="MainGameScene"]
 visible = false
 position = Vector2(-184, 272)
-scale = Vector2(1.25, 1.25)
 texture = SubResource("CompressedTexture2D_btat0")
 script = ExtResource("2_xux5s")
 
@@ -46,6 +51,7 @@ offset_left = 1019.0
 offset_top = 6.0
 offset_right = 1174.0
 offset_bottom = 102.0
+theme = ExtResource("7_xsrla")
 theme_override_font_sizes/font_size = 70
 text = "HP:3"
 script = ExtResource("6_cl5ml")
@@ -55,6 +61,8 @@ offset_left = 1191.0
 offset_top = 21.0
 offset_right = 1418.0
 offset_bottom = 91.0
+theme = ExtResource("7_xsrla")
+theme_override_font_sizes/font_size = 18
 text = "Back
 返回
 （怕你看不懂英文）（滑稽）"
