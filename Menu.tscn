@@ -15,58 +15,29 @@ texture = ExtResource("1_jrsko")
 
 [node name="Button1" type="Button" parent="Menu"]
 z_index = 1
-offset_left = 31.0
-offset_top = 54.0
-offset_right = 97.0
-offset_bottom = 85.0
-scale = Vector2(6.59233, 6.59233)
-text = "新游戏1"
+offset_left = 114.0
+offset_top = 107.0
+offset_right = 1322.0
+offset_bottom = 438.0
+theme_override_font_sizes/font_size = 80
+text = "游戏1
+（没错现在只有1）
+（点吧点吧这么大就是让你点的）"
 script = ExtResource("2_14t4r")
 
-[node name="Button2" type="Button" parent="Menu"]
-z_index = 1
-offset_left = 521.0
-offset_top = 47.0
-offset_right = 587.0
-offset_bottom = 78.0
-scale = Vector2(6.59233, 6.59233)
-text = "新游戏2"
-script = ExtResource("2_14t4r")
-
-[node name="Button3" type="Button" parent="Menu"]
-z_index = 1
-offset_left = 1009.0
-offset_top = 58.0
-offset_right = 1075.0
-offset_bottom = 89.0
-scale = Vector2(6.59233, 6.59233)
-text = "新游戏3"
-script = ExtResource("2_14t4r")
-
-[node name="Button4" type="Button" parent="Menu"]
-z_index = 1
-offset_left = 37.0
-offset_top = 298.0
-offset_right = 103.0
-offset_bottom = 329.0
-scale = Vector2(6.59233, 6.59233)
-text = "新游戏4"
-script = ExtResource("2_14t4r")
-
-[node name="Button5" type="Button" parent="Menu"]
-z_index = 1
-offset_left = 517.0
-offset_top = 300.0
-offset_right = 583.0
-offset_bottom = 331.0
-scale = Vector2(6.59233, 6.59233)
-text = "新游戏5"
-script = ExtResource("2_14t4r")
-
-[node name="Button" type="Button" parent="Menu"]
+[node name="ExitButton" type="Button" parent="Menu"]
 offset_left = 1214.0
 offset_top = 679.0
 offset_right = 1414.0
 offset_bottom = 791.0
+theme_override_font_sizes/font_size = 50
 text = "Exit"
 script = ExtResource("3_r406u")
+
+[node name="Label" type="Label" parent="Menu"]
+offset_left = 24.0
+offset_top = 28.0
+offset_right = 374.0
+offset_bottom = 97.0
+theme_override_font_sizes/font_size = 50
+text = "（极简的）菜单"

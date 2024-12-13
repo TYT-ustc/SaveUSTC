@@ -8,7 +8,7 @@ signal attack
 var data : Dictionary
 var target_position : Vector2
 var moving : bool = false
-var speed : float = 100.0  # 每秒移动的像素数
+var speed : float = 200.0  # 每秒移动的像素数
 
 var current_checkpoint : int = 0  # 当前检查点索引
 var map_points : Array = []  # 存储地图检查点
@@ -40,7 +40,7 @@ func _on_start_1():
 func move_to(target: Vector2):
 	target_position = target
 	moving = true
-	print(self.name, " moving to: ", target_position)
+	#print(self.name, " moving to: ", target_position)
 
 func _process(delta: float) -> void:
 	if moving:
@@ -49,13 +49,13 @@ func _process(delta: float) -> void:
 		if position.distance_to(target_position) < 1:
 			position = target_position
 			moving = false
-			print(self.name, " reached target: ", target_position)
+			#print(self.name, " reached target: ", target_position)
 			# 前往下一个检查点
 			current_checkpoint += 1
 			if current_checkpoint < map_points.size():
 				target_position = map_points[current_checkpoint]
 				moving = true
-				print(self.name, " moving to next checkpoint: ", target_position)
+				#print(self.name, " moving to next checkpoint: ", target_position)
 			else:
 				print(self.name, " has reached all checkpoints.")
 				# 设置自身为不可见并发射 attack 信号
