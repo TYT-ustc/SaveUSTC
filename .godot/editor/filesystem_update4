@@ -7,3 +7,9 @@ res://Game/label.gd
 res://Game/original_road.gd
 res://Game/game.gd
 res://Game/enemy_1.gd
+res://Music/autobgm.gd
+res://Menu/Menu.tscn
+res://start.gd
+res://button.gd
+res://Game/backtomenu.gd
+res://Menu/menu.gd

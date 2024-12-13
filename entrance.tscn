@@ -1,17 +1,16 @@
 [gd_scene load_steps=7 format=3 uid="uid://bfehmbgx8q8bd"]
 
+[ext_resource type="Script" path="res://start.gd" id="1_gre76"]
 [ext_resource type="Texture2D" uid="uid://bgm2b32y5yjdh" path="res://Pic/BackGround.png" id="1_qiwec"]
 [ext_resource type="Theme" uid="uid://be6u67ywwprkg" path="res://Themes/Theme.tres" id="2_6vdpc"]
 [ext_resource type="FontFile" uid="uid://dir7wn3vfk883" path="res://Fonts/ark-pixel-12px-proportional-zh_cn.otf" id="2_q7go1"]
 [ext_resource type="Script" path="res://button.gd" id="3_tqroe"]
 [ext_resource type="FontFile" uid="uid://frv7iy537npn" path="res://Fonts/MiSans-Normal.otf" id="4_y3xxn"]
 
-[sub_resource type="GDScript" id="GDScript_01h32"]
-
 [node name="Node2D" type="Node2D"]
 
 [node name="Start" type="Node2D" parent="."]
-script = SubResource("GDScript_01h32")
+script = ExtResource("1_gre76")
 
 [node name="Background" type="Sprite2D" parent="Start"]
 position = Vector2(720, 405)
@@ -51,7 +50,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_y3xxn")
 theme_override_font_sizes/font_size = 20
 text = "Made with Godot Engine 4.3
-Latest Version Made At 2024/12/13 01:30
+Latest Version Made At 2024/12/13 23:03
 Members: Ziqin Xu, Yutian Tang, Haoran Zhou
 (为什么要写英文呢因为英文看起来比较装逼)"
 

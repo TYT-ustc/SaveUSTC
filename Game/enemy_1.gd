@@ -8,7 +8,7 @@ signal attack
 var data : Dictionary
 var target_position : Vector2
 var moving : bool = false
-var speed : float = 200.0  # 每秒移动的像素数
+var speed : float = 100.0  # 每秒移动的像素数
 
 var current_checkpoint : int = 0  # 当前检查点索引
 var map_points : Array = []  # 存储地图检查点
@@ -23,7 +23,7 @@ func _ready():
 	print("Enemy ready: ", self.name)
 
 func _on_start_1():
-	print("Signal received: start_1 for ", self.name)
+	#print("Signal received: start_1 for ", self.name)
 	# 获取地图信息
 	var map = data["map"]
 	# 存储所有检查点的位置

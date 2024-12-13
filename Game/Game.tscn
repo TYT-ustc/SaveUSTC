@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://drb0vxqob01hv"]
 
 [ext_resource type="Script" path="res://Game/game.gd" id="1_ickso"]
-[ext_resource type="Texture2D" uid="uid://bh70xl8rokwoi" path="res://Pic/MenuBKG.png" id="2_0aijh"]
+[ext_resource type="Texture2D" uid="uid://bh70xl8rokwoi" path="res://Menu/MenuBKG.png" id="2_0aijh"]
 [ext_resource type="Script" path="res://Game/original_road.gd" id="2_xux5s"]
 [ext_resource type="Texture2D" uid="uid://dum5mlb8a36u0" path="res://Pic/enemy1-PKU.png" id="3_iadfo"]
 [ext_resource type="Script" path="res://Game/enemy_1.gd" id="4_3ferb"]

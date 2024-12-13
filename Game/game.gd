@@ -8,6 +8,7 @@ var HP : int
 
 signal attack
 signal refresh(hp: int)
+signal GameBGM
 
 func read_json(filepath: String) -> Dictionary:
 	var file = FileAccess.open(filepath, FileAccess.READ)
@@ -26,6 +27,7 @@ func read_json(filepath: String) -> Dictionary:
 		return {}
 
 func _ready():
+	Autobgm.emit_signal("GameBGM")
 	var game_num = Globals.current_scene_number
 	print("Current game number: ", game_num)
 	# 根据game_num确定读取的文件路径
@@ -41,6 +43,7 @@ func _ready():
 	emit_signal("refresh", HP)
 	connect("attack", Callable(self, "_on_attack"))
 	drawmap()
+	await get_tree().create_timer(1).timeout
 	for i in range(data["enemy"]["num"]):
 		drawenemy(i)
 		await get_tree().create_timer(4.0).timeout  # 控制敌人生成的间隔
@@ -67,7 +70,7 @@ func drawmap():
 		add_child(copied_sprite)
 		#加入组
 		copied_sprite.add_to_group("roads")
-		print("Added road: ", copied_sprite.name, " at position: ", copied_sprite.position)
+		#print("Added road: ", copied_sprite.name, " at position: ", copied_sprite.position)
 	get_tree().call_group("roads", "begin")
 
 func drawenemy(id: int):
