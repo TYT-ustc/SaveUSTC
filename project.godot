@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="保卫USTC"
+config/name="虚空防线VoidDefense"
 run/main_scene="res://entrance.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/image="res://Pic/Background.png"
