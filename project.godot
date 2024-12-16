@@ -14,7 +14,7 @@ config/name="虚空防线VoidDefense"
 run/main_scene="res://Entrance.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/image="res://Pic/Background.png"
-config/icon="res://icon.svg"
+config/icon="res://empty.svg"
 
 [autoload]
 

@@ -1,7 +1,2 @@
-res://Game/Game.tscn
 res://globals.gd
 res://Themes/Theme.tres
-res://Game/gamemain.gd
-res://Entrance.tscn
-res://Menu/Menu.tscn
-res://Game/original_road.gd
