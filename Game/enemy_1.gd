@@ -18,20 +18,20 @@ func _ready():
 	if not name.begins_with("Enemy_"):
 		print("Not a clone, script will not execute.")
 		return
-	var root = get_tree().root.get_child(0)
-	data = root.data
+	data = Globals.data
 	connect("start_1", Callable(self, "_on_start_1"))
+	scale = Vector2(6, 6)
 	print("Enemy ready: ", self.name)
 
 func _on_start_1():
-	print("Signal received: start_1 for ", self.name)
+	#print("Signal received: start_1 for ", self.name)
 	# 获取地图信息
 	var map = data["map"]
 	# 存储所有检查点的位置
 	for i in range(map["num"]):
 		var x = map["value"][i][0]
 		var y = map["value"][i][1]
-		var pos = Vector2(200 + 180 * x, 300 + 180 * y)
+		var pos = Vector2(data["coords"]["origin"][0] + data["coords"]["size"] * x, data["coords"]["origin"][1] + data["coords"]["size"] * y)
 		map_points.append(pos)
 	# 设置第一个目标位置
 	if map_points.size() > 0:
@@ -41,7 +41,7 @@ func _on_start_1():
 func move_to(target: Vector2):
 	target_position = target
 	moving = true
-	print(self.name, " moving to: ", target_position)
+	#print(self.name, " moving to: ", target_position)
 
 func _process(delta: float) -> void:
 	if moving:
@@ -50,7 +50,7 @@ func _process(delta: float) -> void:
 		if position.distance_to(target_position) < 1:
 			position = target_position
 			moving = false
-			print(self.name, " reached target: ", target_position)
+			#print(self.name, " reached target: ", target_position)
 			# 前往下一个检查点
 			current_checkpoint += 1
 			if current_checkpoint < map_points.size():
