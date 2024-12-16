@@ -9,7 +9,7 @@ func _ready():
 	timer.one_shot = false  # 如果希望计时器重复运行
 	add_child(timer)  # 将计时器添加到场景树中
 	if name.begins_with("road_"):
-		self.scale = Vector2(12, 12)
+		self.scale = Vector2(7, 7)
 		#print("OK " + name)
 		timer.connect("timeout", Callable(self, "_on_Timer_timeout"))
 		# 如果您想在开始时就启动计时器，可以在这里启动

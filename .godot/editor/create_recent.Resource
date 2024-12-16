@@ -1,3 +1,4 @@
+SpriteFrames
 StyleBoxTexture
 Theme
 FontFile

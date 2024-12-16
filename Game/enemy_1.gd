@@ -30,7 +30,7 @@ func _on_start_1():
 	for i in range(map["num"]):
 		var x = map["value"][i][0]
 		var y = map["value"][i][1]
-		var pos = Vector2(200 + 180 * x, 300 + 180 * y)
+		var pos = Vector2(data["coords"]["origin"][0] + data["coords"]["size"] * x, data["coords"]["origin"][1] + data["coords"]["size"] * y)
 		map_points.append(pos)
 	# 设置第一个目标位置
 	if map_points.size() > 0:
@@ -55,7 +55,7 @@ func _process(delta: float) -> void:
 			if current_checkpoint < map_points.size():
 				target_position = map_points[current_checkpoint]
 				moving = true
-				#print(self.name, " moving to next checkpoint: ", target_position)
+				print(self.name, " moving to next checkpoint: ", target_position)
 			else:
 				print(self.name, " has reached all checkpoints.")
 				# 设置自身为不可见并发射 attack 信号
