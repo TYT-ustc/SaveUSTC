@@ -1,8 +1,7 @@
 res://Game/Game.tscn
 res://globals.gd
 res://Themes/Theme.tres
+res://Game/gamemain.gd
 res://Entrance.tscn
 res://Menu/Menu.tscn
-res://default_bus_layout.tres
-res://Game/originaltower.gd
-res://Game/game1.json
+res://Game/original_road.gd

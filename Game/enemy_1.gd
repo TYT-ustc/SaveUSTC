@@ -20,6 +20,7 @@ func _ready():
 		return
 	data = Globals.data
 	connect("start_1", Callable(self, "_on_start_1"))
+	scale = Vector2(6, 6)
 	print("Enemy ready: ", self.name)
 
 func _on_start_1():

@@ -37,10 +37,16 @@
 		"HP": 6
 	},
 	"tower":{ 
-		"num": 2,
+		"num": 8,
 		"value": [
 			{"type": 1},
-			{"type": 2}
+			{"type": 2},
+			{"type": 3},
+			{"type": 1},
+			{"type": 1},
+			{"type": 1},
+			{"type": 1},
+			{"type": 1}
 		]
 	}
 }

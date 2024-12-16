@@ -45,7 +45,7 @@ func _ready():
 	connect("attack", Callable(self, "_on_attack"))
 	drawmap()
 	drawtowers()
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0).timeout
 	for i in range(data["enemy"]["num"]):
 		drawenemy(i)
 		await get_tree().create_timer(4.0).timeout  # 控制敌人生成的间隔
@@ -66,8 +66,7 @@ func drawmap():
 		print("x,y: ", x, y)
 		copied_sprite.position = Vector2(data["coords"]["origin"][0] + size * x, data["coords"]["origin"][1] + size * y)
 		if i == num - 1:
-			copied_sprite.texture = load("res://Pic/USTC.png")
-			copied_sprite.scale = Vector2(0.35*130/data["coords"]["size"], 0.35*130/data["coords"]["size"])
+			copied_sprite.texture = load("res://Pic/road/destination.png")
 			copied_sprite.name = "destination"
 		else:
 			copied_sprite.name = "road_%d" % i
@@ -81,6 +80,9 @@ func drawmap():
 		#加入组
 		copied_sprite.add_to_group("roads")
 		#print("Added road: ", copied_sprite.name, " at position: ", copied_sprite.position)
+		#更新全局变量void_area为0
+		Globals.void_area[x][y] = 0
+		await get_tree().create_timer(0.05).timeout
 	get_tree().call_group("roads", "begin")
 
 func drawenemy(id: int):
